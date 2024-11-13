@@ -105,7 +105,7 @@ function Header() {
     return (
         <div className="flex-1 p-2 " >
             {/* Header part one */}
-            <div className='flex justify-between gap-[10px] w-full mt-[25px] px-2 py-2' >
+            <div className='flex justify-between  gap-[10px] w-full mt-[25px] px-2 py-2' >
 
                 {/* filter select boxes */}
                 <div className='flex justify-start gap-[5px]'>
@@ -135,7 +135,7 @@ function Header() {
                     </div>
 
 
-                    <div className='flex relative max-w-[150px]  bottom-[10px]  ml-[15px] '>
+                    <div className='flex relative w-[150px]  mr- bottom-[10px]  ml-[15px] '>
                         <FilterDropdown isOpen={activeDropdown === "Hr mütəxəssis"} filterData={hrTeams} onToggle={() => handleToggle("Hr mütəxəssis")} filterName="Hr mütəxəssis" />
                     </div>
 
@@ -143,11 +143,11 @@ function Header() {
                 </div>
 
 
-                <div className='flex gap-[5px]  '>
+                <div className='flex  justify-end gap-[5px]  '>
 
-                    <div className='h-[44px] mr-[10px] max-w-[49px]  border-[1px] border-[border-[#FF5733]] rounded-md pt-[10px] pr-[10px] pb-[10px] pl-[12px] gap-[10px] cursor-pointer' >
-                        <button>
-                            <img src={resetBtn} alt="resetbtn" />
+                    <div className='h-[44px]  mr-[10px] w-[49px]  border-[1px] border-[border-[#FF5733]] rounded-md pt-[10px] pr-[10px] pb-[10px] pl-[12px] gap-[10px] cursor-pointer' >
+                        <button >
+                            <img src={resetBtn} className='w-50px' alt="resetbtn" />
                         </button>
                     </div>
 
@@ -167,9 +167,9 @@ function Header() {
                     </div>
 
 
-                    <div className='mr-[20px]  flex relative'>
+                    <div className='mr-[20px]  flex '>
                         <button>
-                            <img src={nots} className='w-[30px]' alt="nots" />
+                            <img src={nots} className='w-[35px]' alt="nots" />
                         </button>
                         <div className='mt-[13px] ml-[-12.5px] w-[12.5px] h-[12.5px] top-[2.5px]  bg-[#CF2121] rounded-xl'>
                             <p className='text-white font-bold ml-[3.5px] text-[8.33px]'>5</p>
@@ -178,10 +178,9 @@ function Header() {
                     </div>
 
 
-
-                    <ul >
+                    <ul className='w-[80px]' >
                         <li>
-                            <img src={user1image} alt="Option 1" />
+                            <img src={user1image} className='w-[35px]' alt="Option 1" />
                             <img className='ml-[7px]' src={arrow} alt="arrow" />
                        </li>
                     </ul>
