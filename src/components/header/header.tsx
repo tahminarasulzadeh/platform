@@ -103,7 +103,7 @@ function Header() {
 
 
     return (
-        <div className="h-screen flex-1 p-2" >
+        <div className="h-screen flex-1 p-2 " >
             {/* Header part one */}
             <div className='flex justify-between  mt-[25px] ml-[5px] mr-[5px]'>
 
@@ -143,7 +143,7 @@ function Header() {
                 </div>
 
 
-                <div className='flex justify-end '>
+                <div className='flex gap-[20px] justify-between '>
 
                     <div className='h-[44px]  mt-[15px] mr-[10px] w-[49px]  border-[1px] border-[border-[#FF5733]] rounded-md pt-[10px] pr-[10px] pb-[10px] pl-[12px] gap-[10px] cursor-pointer' >
                         <button>
@@ -167,7 +167,7 @@ function Header() {
                     </div>
 
 
-                    <div className='mr-[20px]  mt-[15px] flex relatice'>
+                    <div className='mr-[20px]  mt-[20px] flex relatice'>
                         <button>
                             <img src={nots} className='w-[25px]' alt="nots" />
                         </button>
@@ -179,7 +179,7 @@ function Header() {
 
 
 
-                    <ul className="mt-[15px]">
+                    <ul className="mt-[20px]">
                         <li>
                             <img src={user1image} alt="Option 1" />
                             <img className='ml-[7px]' src={arrow} alt="arrow" />
