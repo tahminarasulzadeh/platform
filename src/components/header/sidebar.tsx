@@ -27,7 +27,7 @@ function Sidebar() {
 
             {open && <div className="flex justify-center relative">
                <img src={search} alt="search" className=" mr-[-30px] mt-[3px] z-10" />
-               <input type="text" placeholder="Search" className="bg-[#223250] w-[270px] h-[30px] rounded-[8px] focus:outline-none pl-[35px] placeholder:font-noto placeholder:text-[14px] placeholder:font-normal placeholder:text-[#5B677E]" />
+               <input type="text" placeholder="Search" className="bg-[#223250] w-[270px] text-white text-noto font-normal text-[14px] h-[30px] rounded-[8px] focus:outline-none pl-[35px] placeholder:font-noto placeholder:text-[14px] placeholder:font-normal placeholder:text-[#5B677E]" />
             </div>
             }
 

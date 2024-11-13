@@ -10,7 +10,80 @@ import details from '../../assets/details.svg';
 import fileDoc from '../../assets/vscode-icons_file-type-excel.svg';
 import pdfDoc from '../../assets/vscode-icons_file-type-pdf2.svg';
 
+
+import FilterDropdown from './filterDropdown';
+import YearDropdown from './yearDropdown';
+
 function Header() {
+   
+    const years:string[] = [
+      
+        '2016',
+        '2017',
+        '2018',
+        '2020',
+        '2021',
+        '2022',
+        '2023',
+        '2024'
+    ]
+
+
+       
+    const months:string[] = [
+       'Yanvar',
+       'Fevral',
+        'Mart',
+        "Aprel",
+        'May',
+        'İyun',
+        'Iyul', 
+        'Avqust',
+        'Sentyabr', 
+         'Oktyabr',
+         'Noyabr',
+         "Dekarb"
+     
+    ]
+
+
+    const cities:string[] = [
+        'Baku',
+        'Ganja',
+        "Lankaran",
+        "Nakhchivan",
+        'Shaki',
+        "Guba"
+      ]
+    
+
+    const positions:string[] = [
+        'Team Lead',
+        'Project Manager',
+        "Deparment Manager",
+        "Conten Creator",
+        'Marketing Manager',
+         ]
+
+
+
+    const companies:string[] = [
+        'AgroExp',
+        'Baku Tech',
+        "Baku Pearl",
+        "LenFarms",
+        'NaxTrans',
+         ]
+
+
+         const hrTeams:string[] = [
+            'Aysel Hasanova',
+            'Farid Aliyev',
+            "Sama Safarova",
+            "Hikmet Karimov",
+          
+             ]
+    
     return (
         <div className="h-screen flex-1 p-2" >
             {/* Header part one */}
@@ -20,49 +93,33 @@ function Header() {
                 <div className='flex justify-start gap-[10px]'>
 
                     <div className='flex relative w-[77px] top-[5px] bottom-[10px] justify-center '>
-                        <select className='text-sm font-medium text-custom-gray appearance-none w-full cursor-pointer focus:outline-none font-[Noto Sans] ' name="city" id="city">
-                            <option className='foto-[Noto Sans]' value="şəhər">Şəhər</option>
-                        </select>
-                        <img src={arrow} alt="arrow" className='absolute w-[16px] ml-[35px] mt-[29px] pointer-events-none on' />
-                    </div>
+                       <FilterDropdown filterData={cities} filterName="Şəhər" />
+                       </div>
 
 
                     <div className='flex relative w-[47px] top-[5px] bottom-[10px] ml-[15px] justify-center'>
-                        <select className='text-sm font-medium text-custom-gray appearance-none w-full cursor-pointer focus:outline-none' name="year" id="year">
-                            <option value="year">İl</option>
-                        </select>
-                        <img src={arrow} alt="arrow" className='absolute w-[16px]  mt-[29px] pointer-events-none on' />
+                    <FilterDropdown filterData={years} filterName="İl" />
                     </div>
 
-                    <div className='flex relative w-[77px] top-[5px] bottom-[10px] justfy-center'>
-                        <select className='text-sm font-medium text-custom-gray appearance-none w-full cursor-pointer focus:outline-none' name="month" id="month">
-                            <option value="month">Ay</option>
-                        </select>
-                        <img src={arrow} alt="arrow" className='absolute w-[16px] ml-[25px] mt-[29px] pointer-events-none on' />
-                    </div>
+                    <div className='flex relative  ml-3 w-[77px] top-[5px] bottom-[10px] justfy-center'>
+                    <FilterDropdown filterData={months} filterName="Ay" />
+                       
+                   </div>
 
                     <div className='flex relative w-[77px] top-[5px] bottom-[10px] justify-center'>
-                        <select className='text-sm font-medium text-custom-gray appearance-none w-full cursor-pointer focus:outline-none' name="position" id="position">
-                            <option value="vəzifə">Vəzifə</option>
-                        </select>
-                        <img src={arrow} alt="arrow" className='absolute w-[16px] ml-[35px] mt-[29px] pointer-events-none on' />
+                    <FilterDropdown filterData={positions} filterName="Vəzifə" />
+                       
                     </div>
 
                     <div className='flex relative w-[77px] top-[5px] bottom-[10px]  ml-[15px] justify-center'>
-                        <select className='text-sm font-medium text-custom-gray appearance-none w-full cursor-pointer focus:outline-none' name="company" id="company">
-                            <option value="şirkət">Şirkət</option>
-                        </select>
-                        <img src={arrow} alt="arrow" className='absolute w-[16px] ml-[35px] mt-[29px] pointer-events-none on' />
+                    <FilterDropdown filterData={companies} filterName="Şirkət" />
+                        
                     </div>
 
 
-                    <div className='flex relative w-[105px] top-[5px] bottom-[10px]  ml-[15px] justify-center'>
-                        <select className='text-sm font-medium text-custom-gray appearance-none w-full cursor-pointer focus:outline-none' name="specialist" id="specialist">
-                            <option value="specialist">Hr mütəxəssis</option>
-                        </select>
-                        <img src={arrow} alt="arrow" className='absolute w-[16px] ml-[115px] mt-[29px] pointer-events-none on' />
-                    </div>
-
+                    <div className='flex relative w-[150px] top-[5px] bottom-[10px]  ml-[15px] justify-center'>
+                    <FilterDropdown filterData={hrTeams} filterName="Hr mütəxəssis" />
+                       </div>
                 </div>
 
 

@@ -51,7 +51,7 @@ const Dropdown = () => {
               <a href="#item1" className="flex w-full  h-[33px] px-6 py-2 text-sm  transition-all duration-[1000ms] text-[#C9CACB] hover:bg-[#275EC3] hover:text-white ">
                 <img src={report} alt="plan" />
                 <span className='ml-[2px]'>Hesabat</span>
-                <div className="w-[7px] h-[7px] border-[1px] border-[#c9cacb] hover:border-white rounded-full mt-[7.5px] ml-[7.3rem]"></div>
+                <div className="w-[7px] h-[7px] border-[1px] border-[#c9cacb] hover:border-white rounded-full mt-[7.8px] ml-[7.3rem]"></div>
 
               </a>
             </li>
