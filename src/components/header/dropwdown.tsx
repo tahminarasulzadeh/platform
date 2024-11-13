@@ -30,29 +30,37 @@ const Dropdown = () => {
         <div className="absolute w-[270px] right-0 mt-2 bg bg-white mt-[-3px] rounded-md shadow-lg">
           <ul className=" bg-[#1F3D74] border-none rounded-md">
             <li className='hover:bg-[#275EC3'>
-              <a href="#item1" className="flex h-[33px] w-full px-6 py-2 text-sm text-[#C9CACB]  transition-all duration-[1000ms] hover:bg-[#275EC3] hover:text-white ">
+              <a href="#item1" className="flex h-[33px] justify-between w-full px-6 py-2 text-sm text-[#C9CACB]  transition-all duration-[1000ms] hover:bg-[#275EC3] hover:text-white ">
+                <div className='flex'>
                 <img src={master} alt="plan" />
                 <span className='ml-[5px]'>Master Schedule</span>
+                </div>
+                
                 <div className="w-[7px] h-[7px] border-[1px] border-[#c9cacb] hover:border-white rounded-full mt-[7.5px] ml-[4rem]"></div>
 
               </a>
             </li>
 
             <li className='hover:bg-[#275EC3'>
-              <a href="#item1" className="flex w-full h-[33px]  transition-all duration-[1000ms] px-6 py-2 text-sm text-[#C9CACB] hover:bg-[#275EC3] hover:text-white ">
+              <a href="#item1" className="flex w-full h-[33px] justify-between transition-all duration-[1000ms] px-6 py-2 text-sm text-[#C9CACB] hover:bg-[#275EC3] hover:text-white ">
+                <div className='flex'>
                 <img src={state} alt="plan" />
                 <span className='ml-[5px]'>Dövlət qürumları ilə iş</span>
-                <div className="w-[7px] h-[7px] border-[1px] rounded-full mt-[7.5px] ml-[2rem]"></div>
+                </div>
+                
+                <div className="w-[7px] h-[7px] border-[1px] rounded-full mt-[7.5px] "></div>
 
               </a>
             </li>
 
-            <li className='hover:bg-[#275EC3 '>
-              <a href="#item1" className="flex w-full  h-[33px] px-6 py-2 text-sm  transition-all duration-[1000ms] text-[#C9CACB] hover:bg-[#275EC3] hover:text-white ">
-                <img src={report} alt="plan" />
+            <li className='hover:bg-[#275EC3'>
+              <a href="#item1" className="flex w-full justify-between h-[33px] px-6 py-2 text-sm  transition-all duration-[1000ms] text-[#C9CACB] hover:bg-[#275EC3] hover:text-white ">
+               
+               <div className='flex'>
+               <img src={report} alt="plan" />
                 <span className='ml-[2px]'>Hesabat</span>
-                <div className="w-[7px] h-[7px] border-[1px] border-[#c9cacb] hover:border-white rounded-full mt-[7.8px] ml-[7.3rem]"></div>
-
+               </div>
+                <div className="w-[7px] h-[7px] border-[1px]  border-[#c9cacb] hover:border-white rounded-full mt-[7.8px]  flex justify-end"></div>
               </a>
             </li>
 

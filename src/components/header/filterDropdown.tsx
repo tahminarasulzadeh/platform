@@ -11,42 +11,47 @@ import search from '../../assets/search.svg';
 interface MyComponentProps {
   filterData: string[];
   filterName: string;
+  isOpen: boolean;
+  onToggle: () => void;
+    
+  
 }
 
-const FilterDropdown:React.FC<MyComponentProps> = ({filterData, filterName}) => {
-  const [isOpen, setIsOpen] = useState(false);
+const FilterDropdown:React.FC<MyComponentProps> = ({filterData, isOpen, filterName, onToggle}) => {
+
   const [isSearch, setSearch] = useState(false);
+  const [isOpen2, setIsOpen2] = useState(false);
 
 
-  const toggleDropdown = () => {
-    setIsOpen(!isOpen);
-  };
+  // const toggleDropdown = () => {
+  //     isOpen ? isOpen : !isOpen;
+  // };
 
 
   const toggleSearch = () => {
     setSearch(!isSearch);
   };
 
-
+ console.log('isOpen' , isOpen)
  
 
   return (
     <div className={`max-w-[200px] h-[44px] mt-2 relative inline-block  text-left}`}>
       {/* Dropdown Button */}
       <button
-        onClick={toggleDropdown}
-        className={` transition-all duration-[1000ms] inline-flex max-w-[280px] h-[44px] py-4 border-[1px] border-[#22385F] px-3 justify-start font-medium rounded-lg  ocus:outline-none ${isOpen ? '  bg-[#22385F]' : 'bg-white'}`}
+        onClick={onToggle}
+        className={` transition-all duration-[1000ms] inline-flex max-w-[180px] h-[44px] py-3 border-[1px] border-[#22385F] px-3 justify-start font-medium rounded-lg  ocus:outline-none ${isOpen ? '  bg-[#22385F]' : 'bg-white'}`}
       >
         <span className={`font-noto text-[14px] font-normal leading-[19.07px] ${!isOpen ? "text-[#6D6D6D]" : "text-white"}`}>{filterName}</span>
         <div className={`w-[18px] mt-[3px] ml-[3px] h-0 border-l-[9px] border-l-transparent rounded border-r-[9px] border-r-transparent border-b-[10px]  ${!isOpen && ' border-[#6D6D6D] rotate-180 mt-[7.5px]'}`}></div>
       </button>
 
       {/* Dropdown Menu */}
-      {isOpen && (
+      {isOpen &&(
         <div className="absolute flex flex-col items-left transition-all duration-[1000ms] pb-[5px] max-w-[313px] max-h-[503px] border-[1px] border-[#E5E7EA]  bg-[#FFFFFF] rounded-md shadow-lg">
 
           <div className='flex justify-between mt-3 w-[311px] px-3 h-[22px] bg-[#F6F7F8]'>
-            <p className="font-noto font-medium leading-[21.97px] text-[16px] text-[#22385F] text-left" >{filterName} <span onClick={() => setIsOpen(!isOpen)} className=' cursor-pointer font-noto absolute font-font-semibold text-[28px] right-[10px] text-right text-[#6D6D6D]' >&times;</span> </p>
+            <p className="font-noto font-medium leading-[21.97px] text-[16px] text-[#22385F] text-left" >{filterName}</p>
           </div>
 
           <div className='flex flex-col gap-[10px]'>
