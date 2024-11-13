@@ -36,13 +36,13 @@ const FilterDropdown:React.FC<MyComponentProps> = ({filterData, isOpen, filterNa
  
 
   return (
-    <div className={`max-w-[200px] h-[44px] mt-2 relative inline-block  text-left}`}>
+    <div className={`max-w-[150px] h-[44px] mt-2 relative inline-block  text-left}`}>
       {/* Dropdown Button */}
       <button
         onClick={onToggle}
-        className={` transition-all duration-[1000ms] inline-flex max-w-[180px] h-[44px] py-3 border-[1px] border-[#22385F] px-3 justify-start font-medium rounded-lg  ocus:outline-none ${isOpen ? '  bg-[#22385F]' : 'bg-white'}`}
+        className={` transition-all duration-[1000ms] inline-flex max-w-[150px] max-h-[44px] py-3 border-[1px] hover:border-[#22385F] px-3 justify-start font-medium rounded-lg  focus:outline-none ${isOpen ? '  bg-[#22385F]' : 'bg-white'}`}
       >
-        <span className={`font-noto text-[14px] font-normal leading-[19.07px] ${!isOpen ? "text-[#6D6D6D]" : "text-white"}`}>{filterName}</span>
+        <span className={`font-noto text-[14px] max-w-[120px] max-h-[10px] font-normal leading-[19.07px] ${!isOpen ? "text-[#6D6D6D]" : "text-white"}`}>{filterName}</span>
         <div className={`w-[18px] mt-[3px] ml-[3px] h-0 border-l-[9px] border-l-transparent rounded border-r-[9px] border-r-transparent border-b-[10px]  ${!isOpen && ' border-[#6D6D6D] rotate-180 mt-[7.5px]'}`}></div>
       </button>
 

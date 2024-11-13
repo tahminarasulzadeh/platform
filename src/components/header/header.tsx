@@ -80,7 +80,7 @@ function Header() {
         'Team Lead',
         'Project Manager',
         "Deparment Manager",
-        "Conten Creator",
+        "Content Creator",
         'Marketing Manager',
     ]
 
@@ -103,39 +103,39 @@ function Header() {
 
 
     return (
-        <div className="h-screen flex-1 p-2 " >
+        <div className="flex-1 p-2 " >
             {/* Header part one */}
-            <div className='flex justify-between  mt-[25px] ml-[5px] mr-[5px]'>
+            <div className='flex justify-between gap-[10px] w-full mt-[25px] px-2 py-2' >
 
                 {/* filter select boxes */}
-                <div className='flex justify-start mt-[5px]  gap-[6px]'>
+                <div className='flex justify-start gap-[5px]'>
 
-                     <div className='flex relative w-[77px] top-[5px] bottom-[10px] justify-center '>
+                     <div className='flex relative max-w-[77px]  bottom-[10px]  '>
                        <FilterDropdown isOpen={activeDropdown === "Şəhər"} onToggle={() => handleToggle("Şəhər")} filterData={cities} filterName="Şəhər" />
                        </div> 
 
 
-                    <div className='flex relative w-[47px] top-[5px] bottom-[10px] ml-[15px] justify-center'>
+                    <div className='flex relative max-w-[77px] bottom-[10px] ml-[15px] '>
                         <FilterDropdown isOpen={activeDropdown === "İl"} onToggle={() => handleToggle("İl")} filterData={years} filterName="İl" />
                     </div>
 
-                    <div className='flex relative  ml-3 w-[77px] top-[5px] bottom-[10px] justfy-center'>
+                    <div className='flex relative  max-ml-3 w-[77px] bottom-[10px] '>
                         <FilterDropdown isOpen={activeDropdown === "Ay"} onToggle={() => handleToggle("Ay")} filterData={months} filterName="Ay" />
 
                     </div>
 
-                    <div className='flex relative w-[77px] top-[5px] bottom-[10px] justify-center'>
+                    <div className='flex relative max-w-[77px] bottom-[10px] '>
                         <FilterDropdown isOpen={activeDropdown === "Vəzifə"} onToggle={() => handleToggle("Vəzifə")} filterData={positions} filterName="Vəzifə" />
 
                     </div>
 
-                    <div className='flex relative w-[77px] top-[5px] bottom-[10px]  ml-[15px] justify-center'>
+                    <div className='flex relative max-w-[77px]  bottom-[10px]  ml-[15px]'>
                         <FilterDropdown isOpen={activeDropdown === "Şirkət"} filterData={companies} onToggle={() => handleToggle("Şirkət")} filterName="Şirkət" />
 
                     </div>
 
 
-                    <div className='flex relative max-w-[150px] top-[5px] bottom-[10px]  ml-[15px] justify-center'>
+                    <div className='flex relative max-w-[150px]  bottom-[10px]  ml-[15px] '>
                         <FilterDropdown isOpen={activeDropdown === "Hr mütəxəssis"} filterData={hrTeams} onToggle={() => handleToggle("Hr mütəxəssis")} filterName="Hr mütəxəssis" />
                     </div>
 
@@ -143,35 +143,35 @@ function Header() {
                 </div>
 
 
-                <div className='flex gap-[20px] justify-between '>
+                <div className='flex gap-[5px]  '>
 
-                    <div className='h-[44px]  mt-[15px] mr-[10px] w-[49px]  border-[1px] border-[border-[#FF5733]] rounded-md pt-[10px] pr-[10px] pb-[10px] pl-[12px] gap-[10px] cursor-pointer' >
+                    <div className='h-[44px] mr-[10px] max-w-[49px]  border-[1px] border-[border-[#FF5733]] rounded-md pt-[10px] pr-[10px] pb-[10px] pl-[12px] gap-[10px] cursor-pointer' >
                         <button>
                             <img src={resetBtn} alt="resetbtn" />
                         </button>
                     </div>
 
                     <div className='flex relative justify-center'>
-                        <button className='w-[125px] h-[44px] rounded-lg text-white bg-btn-blue mt-[15px] text-left text-[12px] font-medium font-[Noto Sans] leading-[19.07px] p-[10px]'>Layihə əlavə et  </button>
-                        <span className='text-[30px]  font-light mt-[12px]  ml-[-25px] text-white'>+</span>
+                        <button className='w-[125px] h-[44px] rounded-lg text-white bg-btn-blue text-left text-[12px] font-medium font-[Noto Sans] leading-[19.07px] p-[10px]'>Layihə əlavə et  </button>
+                        <span className='text-[30px]  font-light mt-[-3px]  ml-[-25px] text-white'>+</span>
                     </div>
 
 
-                    <div className="flex w-[102px] h-[20px] mt-[25px] mr-[50px] items-center space-x-4 flex relative">
+                    <div className="flex max-w-[102px] h-[20px] mt-[10px] mr-[50px] items-center space-x-4 flex relative">
 
                         <input type="file" id="file" className="hidden" />
-                        <img className='w-[15px] absolute left-[3px] ' src={fileDoc} alt="file" />
+                        <img className='w-[18px] absolute left-[1px] ' src={fileDoc} alt="file" />
                         <label htmlFor="file" className="text-file-color font-medium text-[14px]  leading-[19.07px]  border-[1px] border-[#E5E7EA] py-[12px] px-[20px] rounded-lg shadow-lg flex cursor-pointer">
                             Upload.xlsx
                         </label>
                     </div>
 
 
-                    <div className='mr-[20px]  mt-[20px] flex relatice'>
+                    <div className='mr-[20px]  flex relative'>
                         <button>
-                            <img src={nots} className='w-[25px]' alt="nots" />
+                            <img src={nots} className='w-[30px]' alt="nots" />
                         </button>
-                        <div className='mt-[13px] ml-[-12.5px] w-[12.5px] h-[12.5px] top-[2.5px] left-[12.5px] bg-[#CF2121] rounded-xl'>
+                        <div className='mt-[13px] ml-[-12.5px] w-[12.5px] h-[12.5px] top-[2.5px]  bg-[#CF2121] rounded-xl'>
                             <p className='text-white font-bold ml-[3.5px] text-[8.33px]'>5</p>
                         </div>
 
@@ -179,7 +179,7 @@ function Header() {
 
 
 
-                    <ul className="mt-[20px]">
+                    <ul >
                         <li>
                             <img src={user1image} alt="Option 1" />
                             <img className='ml-[7px]' src={arrow} alt="arrow" />
