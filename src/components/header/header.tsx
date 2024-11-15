@@ -1,3 +1,6 @@
+import { useState, useRef, useEffect } from 'react';
+
+
 import resetBtn from '../../assets/reset.svg';
 import status from '../../assets/f7_status.svg';
 import arrow from '../../assets/vector-filter.svg';
@@ -9,20 +12,33 @@ import list from '../../assets/list.svg';
 import details from '../../assets/details.svg';
 import fileDoc from '../../assets/vscode-icons_file-type-excel.svg';
 import pdfDoc from '../../assets/vscode-icons_file-type-pdf2.svg';
+import detailss from '../../assets/detailss.svg'
+import planImg from  '../../assets/plan-fact.svg'
 
+
+import Table from './table'; 
 import FilterDropdown from './filterDropdown';
-import { useState } from 'react';
+import Detail from '../details';
+import Progress from '../progress';
+
+
 
 function Header() {
     const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+    const [isChecked1, setIsChecked1] = useState(false);
+    const [isChecked2, setIsChecked2] = useState(false);
+    const [isDetail, setIsDetail] = useState(false);
+    const [isProgress, setIsPogress] = useState(true);
+    const [isPlan, setIsPlan] = useState(false);
 
+    
+    
 
   const handleToggle = (filterName: string) => {
     setActiveDropdown(activeDropdown === filterName ? null : filterName);
   }
 
-  const [isChecked1, setIsChecked1] = useState(false);
-  const [isChecked2, setIsChecked2] = useState(false);
+
 
   const handleCheckboxChange = (checkboxId:number) => {
     if (checkboxId === 1) {
@@ -36,7 +52,6 @@ function Header() {
 
 
     const years: string[] = [
-
         '2016',
         '2017',
         '2018',
@@ -102,6 +117,24 @@ function Header() {
     ];
 
 
+
+     function setDetail () {
+          setIsDetail(true);
+          setIsPogress(false);
+          setIsPlan(false);
+     }
+
+     function handlePlan () {
+        setIsPlan(true);
+        setIsDetail(false);
+        setIsPogress(false);
+   }
+
+     function handleProgress () {
+        setIsPogress(true);
+        setIsDetail(false);
+        setIsPlan(false);
+     }
     return (
         <div className="flex-1 p-2 " >
             {/* Header part one */}
@@ -190,21 +223,21 @@ function Header() {
             </div>
             {/* Header part two */}
             <div className='flex justify-between mt-[20px] ml-[5px] mr-[25px]'>
-                <div className='flex justify-start gap-[10px]'>
-                    <div className='flex justify-start  w-[160px] h-[30px] rounded-md border-[1px] border-[#E5E7EA] cursor-pointer'>
+                <div className='flex justify-start gap-[10px] ]'>
+                    <div className={`flex justify-start  w-[160px] h-[30px] rounded-md border-[1px] border-[#E5E7EA] cursor-pointer hover:border-[#2495D7] ${isProgress ? ' border-[#2495D7]' : ''}`} onClick={handleProgress}>
                         <img src={eyeicon} alt='views' />
-                        <p className='font-normal font-[16px] ml-[5px] mt-[3px] text-[#6D6D6D] leading-[21.79px]'>Progress izləmə</p>
+                        <p className='font-normal font-[16px] ml-[5px] mt-[3px] text-[#6D6D6D] leading-[21.79px] '>Progress izləmə</p>
                     </div>
 
-                    <div className='flex justify-center  w-[160px] h-[30px] rounded-md border-[1px] border-[#E5E7EA] cursor-pointer'>
-                        <img src={list} alt='list' />
-                        <p className='font-normal font-[16px] ml-[5px] mt-[3px] text-[#6D6D6D] leading-[21.79px]'>Plan & Faktiki</p>
+                    <div className={`flex justify-center  w-[160px] h-[30px] rounded-md border-[1px] transition-all duration-[1000ms] hover:border-[#D3AB1D] border-[#E5E7EA] cursor-pointer ${isPlan ? 'bg-[#D3AB1D]' : 'bg-white'}  `} onClick={handlePlan}>
+                        <img src={isPlan? planImg : list} alt='list' className='w-[20px]' />
+                        <p className={`font-normal font-[16px] ml-[5px] mt-[3px]  leading-[21.79px] ${isPlan ? " text-white" : "text-[#6D6D6D]"  }`}>Plan & Faktiki</p>
                     </div>
 
 
-                    <div className='flex justify-center  w-[120px] h-[30px] rounded-md border-[1px] border-[#E5E7EA] cursor-pointer'>
-                        <img src={details} alt='details' />
-                        <p className='font-normal font-[16px] ml-[5px] mt-[3px] text-[#6D6D6D] leading-[21.79px]'>Detallar</p>
+                    <div className={`flex justify-center  w-[120px] h-[30px] rounded-md border-[1px] border-[#E5E7EA] cursor-pointer ${isDetail ? "bg-[#AF2082]" : "" }  hover:border-[#AF2082] transition-all duration-[1000ms]`} onClick={setDetail}>
+                        <img src={isDetail ?  detailss : details} alt='details' className={`${isDetail ? "w-[22px]" : ""}`}/>
+                        <p className={`font-normal font-[16px] ml-[5px] mt-[3px]  leading-[21.79px] ${isDetail ? "text-white" : "text-[#6D6D6D]"}`}>Detallar</p>
                     </div>
                 </div>
 
@@ -258,8 +291,12 @@ function Header() {
 
                 </div>
             </div>
+           {/* Tables */}
 
-
+           {isPlan && <Progress />}
+           {isDetail && <Detail />}
+           {isProgress && <Table />}
+          
 
         </div>
     )

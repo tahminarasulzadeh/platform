@@ -4,7 +4,7 @@ function App() {
 
 
   return (
-    <div className="flex">
+    <div className="flex overflow-hidden">
  <Sidebar />
  <Header />
 

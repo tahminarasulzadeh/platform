@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import dotsMenu from '../../assets/mage_dots-menu.svg';
 import cross from '../../assets/cuida_x-outline.svg';
 import search from '../../assets/bitcoin-icons_search-outline.svg';
@@ -15,12 +15,40 @@ import state from '../../assets/mingcute_government-line.svg'
 
 
 function Sidebar() {
-   const [open, setOpen] = useState(false)
+   const [open, setOpen] = useState<boolean>(false)
+
+   const sidebarRef = useRef<HTMLDivElement | null>(null);
+
+
+   const toggleSidebar = () => {
+      setOpen(!open);
+   };
+
+
+   useEffect(() => {
+      const handleClickOutside = (event: MouseEvent) => {
+         if (sidebarRef.current && !sidebarRef.current.contains(event.target as Node)) {
+            setOpen(false);
+         }
+      };
+
+
+      if (open) {
+         document.addEventListener('mousedown', handleClickOutside);
+      }
+
+      // Cleanup the event listener when the component unmounts or when the sidebar closes
+      return () => {
+         document.removeEventListener('mousedown', handleClickOutside);
+      };
+   }, [open]); // Only re-run when `isOpen` changes
+
+
    return (
-      <aside className="flexjustify-start">
+      <aside className="flex sidebar justify-star" ref={sidebarRef}>
          <div className={`bg-[#172847]  min-h-screen  ${open ? "w-[290px]" : "w-[40px]"}`}>
             <div className={`py-7 flex ${open ? "justify-start ml-[10px]" : "justify-center"}`}>
-               <img src={dotsMenu} alt='dotsMenu' className="cursor-pointer" onClick={() => setOpen(true)} />
+               <img src={dotsMenu} alt='dotsMenu' className="cursor-pointer" onClick={toggleSidebar} />
                {open ? <h2 className="text-[#C9CACB] font-noto font-normal ml-[5px] mt-[3px] text-[14px] leading-[19.07px]">Menu</h2> : null}
                {open ? <img src={cross} alt="cross" className="relative left-[11rem] mt-[5px] cursor-pointer" onClick={() => setOpen(false)} /> : null}
             </div>
@@ -40,21 +68,21 @@ function Sidebar() {
 
             <div className={`py-1 mt-3 flex ${open ? "justify-start ml-[10px]" : "justify-center"}`} onClick={() => setOpen(true)}>
                {open ? <Dropdown /> :
-               <div className=" flex flex-col items-center gap-[10px] transition-all duration-[1000ms]  hover:bg-[#275EC3]">
+                  <div className=" flex flex-col items-center gap-[10px] transition-all duration-[1000ms]  hover:bg-[#275EC3]">
                      <img src={plan} alt='dotsMenu' className="cursor-pointer justify-center" />
-                   <div>
-                     <div className="flex justify-center mt-[5px] w-[40px] h-[21px] bg-[#275EC3]">
-                     <img src={master} alt='dotsMenu' className="cursor-pointer w-[11px] h-[15.28px]" />
-                      </div>
+                     <div>
+                        <div className="flex justify-center mt-[5px] w-[40px] h-[21px]">
+                           <img src={master} alt='dotsMenu' className="cursor-pointer w-[11px] h-[15.28px]" />
+                        </div>
 
-                      <div className="flex items-center mt-[-1px] flex-col w-[40px] h-[48px] gap-[10px] bg-[#1A3361]">
-                     <img src={state} alt='dotsMenu' className="cursor-pointer mt-[5px] w-[12.23px] h-[14.67px]" />
-                     <img src={report} alt='dotsMenu' className="cursor-pointer ml-[3px] w-[10.04px] h-[14.67px]]" />
-                      </div>
-                   </div>
-               </div>
+                        <div className="flex items-center mt-[-1px] flex-col w-[40px] h-[48px] gap-[10px]">
+                           <img src={state} alt='dotsMenu' className="cursor-pointer mt-[5px] w-[12.23px] h-[14.67px]" />
+                           <img src={report} alt='dotsMenu' className="cursor-pointer ml-[3px] w-[10.04px] h-[14.67px]]" />
+                        </div>
+                     </div>
+                  </div>
 
-                 
+
                }
             </div>
 

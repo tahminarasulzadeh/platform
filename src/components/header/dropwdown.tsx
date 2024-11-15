@@ -17,7 +17,7 @@ const Dropdown = () => {
       {/* Dropdown Button */}
       <button
         onClick={toggleDropdown}
-        className="inline-flex  justify-start w-full px-2 py-2 bg-[#1F3D74]  transition-all duration-[1000ms] text-white font-medium rounded-md shadow-sm hover:bg-[#275EC3] focus:outline-none"
+        className="inline-flex  justify-start w-full px-2 py-2    transition-all duration-[1000ms] text-white font-medium rounded-md shadow-sm hover:bg-[#275EC3] focus:outline-none"
       >
         <img src={plan} alt="plan" />
         <span className='ml-[10px] font-noto text-[14px] font-[400] leading-[19.07px]'>Planlama</span>
