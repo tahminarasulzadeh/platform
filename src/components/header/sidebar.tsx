@@ -59,7 +59,7 @@ function Sidebar() {
             </div>
             }
 
-            <div className={`py-2 px-2 mt-7 flex transition-all duration-[1000ms] hover:bg-[#1F3D74]  ${open ? "justify-start rounded-md ml-[10px] w-[270px] cursor-pointer  " : "justify-center"}`} onClick={() => setOpen(true)}>
+            <div className={`py-2 px-2 mt-7 flex transition-all duration-[1000ms]   ${open ? "justify-start rounded-md ml-[10px] w-[270px] cursor-pointer  " : "justify-center"}`} onClick={() => setOpen(true)}>
                <img src={sales} alt='dotsMenu' className="cursor-pointer" />
                {open ? <h2 className="text-[#C9CACB] font-noto font-normal ml-[7px] mt-[3px] text-[14px] leading-[19.07px]  ">Satınalma İcmalı</h2> : null}
                {open ? <div className="w-[10px] h-[10px] border-[1px] border-[#C9CACB] rounded-full mt-[10px] ml-[6.8rem]"></div> : null}
@@ -68,17 +68,21 @@ function Sidebar() {
 
             <div className={`py-1 mt-3 flex ${open ? "justify-start ml-[10px]" : "justify-center"}`} onClick={() => setOpen(true)}>
                {open ? <Dropdown /> :
-                  <div className=" flex flex-col items-center gap-[10px] transition-all duration-[1000ms]  hover:bg-[#275EC3]">
-                     <img src={plan} alt='dotsMenu' className="cursor-pointer justify-center" />
+                  <div className=" flex flex-col items-center gap-[10px] transition-all duration-[1000ms]">
+                     <img src={plan} alt='dotsMenu' className="cursor-pointer  justify-center" />
                      <div>
                         <div className="flex justify-center mt-[5px] w-[40px] h-[21px]">
                            <img src={master} alt='dotsMenu' className="cursor-pointer w-[11px] h-[15.28px]" />
                         </div>
 
-                        <div className="flex items-center mt-[-1px] flex-col w-[40px] h-[48px] gap-[10px]">
+                        <div className="flex items-center mt-[-1px] flex-col w-[40px] h-[24px] gap-[10px] ">
                            <img src={state} alt='dotsMenu' className="cursor-pointer mt-[5px] w-[12.23px] h-[14.67px]" />
-                           <img src={report} alt='dotsMenu' className="cursor-pointer ml-[3px] w-[10.04px] h-[14.67px]]" />
+                            </div>
+                          <div className="flex items-center mt-[-1px] flex-col w-[40px] h-[24px] gap-[10px] " >
+                           <img src={report} alt='dotsMenu' className="cursor-pointer  ml-[3px] w-[10.04px] h-[14.67px]]" />
                         </div>
+
+
                      </div>
                   </div>
 

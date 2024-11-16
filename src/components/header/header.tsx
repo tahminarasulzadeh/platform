@@ -224,12 +224,12 @@ function Header() {
             {/* Header part two */}
             <div className='flex justify-between mt-[20px] ml-[5px] mr-[25px]'>
                 <div className='flex justify-start gap-[10px] ]'>
-                    <div className={`flex justify-start  w-[160px] h-[30px] rounded-md border-[1px] border-[#E5E7EA] cursor-pointer hover:border-[#2495D7] ${isProgress ? ' border-[#2495D7]' : ''}`} onClick={handleProgress}>
+                    <div className={`flex justify-start  w-[160px] h-[30px] rounded-md border-[1px]  cursor-pointer  ${isProgress ? ' border-[#2495D7]' : 'border-[#E5E7EA]'}`} onClick={handleProgress}>
                         <img src={eyeicon} alt='views' />
                         <p className='font-normal font-[16px] ml-[5px] mt-[3px] text-[#6D6D6D] leading-[21.79px] '>Progress izləmə</p>
                     </div>
 
-                    <div className={`flex justify-center  w-[160px] h-[30px] rounded-md border-[1px] transition-all duration-[1000ms] hover:border-[#D3AB1D] border-[#E5E7EA] cursor-pointer ${isPlan ? 'bg-[#D3AB1D]' : 'bg-white'}  `} onClick={handlePlan}>
+                    <div className={`flex justify-center  w-[160px] h-[30px] rounded-md border-[1px] transition-all duration-[1000ms] = border-[#E5E7EA] cursor-pointer ${isPlan ? 'bg-[#D3AB1D]' : 'bg-white'}  `} onClick={handlePlan}>
                         <img src={isPlan? planImg : list} alt='list' className='w-[20px]' />
                         <p className={`font-normal font-[16px] ml-[5px] mt-[3px]  leading-[21.79px] ${isPlan ? " text-white" : "text-[#6D6D6D]"  }`}>Plan & Faktiki</p>
                     </div>
