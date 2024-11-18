@@ -47,7 +47,7 @@ function Sidebar() {
    return (
       <aside className="flex sidebar justify-star" ref={sidebarRef}>
          <div className={`bg-[#172847]  min-h-screen  ${open ? "w-[290px]" : "w-[40px]"}`}>
-            <div className={`py-7 flex ${open ? "justify-start ml-[10px]" : "justify-center"}`}>
+            <div className={`py-3 flex ${open ?  "justify-start ml-[10px]" : "justify-center  hover:bg-[#275EC3]"}`}>
                <img src={dotsMenu} alt='dotsMenu' className="cursor-pointer" onClick={toggleSidebar} />
                {open ? <h2 className="text-[#C9CACB] font-noto font-normal ml-[5px] mt-[3px] text-[14px] leading-[19.07px]">Menu</h2> : null}
                {open ? <img src={cross} alt="cross" className="relative left-[11rem] mt-[5px] cursor-pointer" onClick={() => setOpen(false)} /> : null}
@@ -59,7 +59,7 @@ function Sidebar() {
             </div>
             }
 
-            <div className={`py-2 px-2 mt-7 flex transition-all duration-[1000ms]   ${open ? "justify-start rounded-md ml-[10px] w-[270px] cursor-pointer  " : "justify-center"}`} onClick={() => setOpen(true)}>
+            <div className={`py-2 px-2 mt-7 flex transition-all  hover:bg-[#275EC3] duration-[1000ms]   ${open ? "justify-start rounded-md ml-[10px] w-[270px] cursor-pointer  " : "justify-center"}`} onClick={() => setOpen(true)}>
                <img src={sales} alt='dotsMenu' className="cursor-pointer" />
                {open ? <h2 className="text-[#C9CACB] font-noto font-normal ml-[7px] mt-[3px] text-[14px] leading-[19.07px]  ">Satınalma İcmalı</h2> : null}
                {open ? <div className="w-[10px] h-[10px] border-[1px] border-[#C9CACB] rounded-full mt-[10px] ml-[6.8rem]"></div> : null}
