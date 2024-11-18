@@ -82,7 +82,7 @@ function Sidebar() {
                            <img src={state} alt='dotsMenu' className="cursor-pointer mt-[5px] w-[12.23px] h-[14.67px]" />
                             </div>
                           <div className="flex items-center hover:bg-[#275EC3] mt-[-1px] flex-col w-[40px] h-[24px] gap-[10px] " >
-                           <img src={report} alt='dotsMenu' className="cursor-pointer  ml-[3px] w-[10.04px] h-[14.67px]]" />
+                           <img src={report} alt='dotsMenu' className="cursor-pointer  ml-[3px] mt-2  w-[10.04px] h-[14.67px]]" />
                         </div>
 
 

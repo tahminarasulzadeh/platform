@@ -65,7 +65,7 @@ function Table() {
             </div>
 
             {/* Cv Dəyərləndirmə */}
-            <div className="w-[549px]  mt-[5px] rounded-lg  bg-[#368AC2]">
+            <div className="w-[549px]   rounded-lg  bg-[#368AC2]">
                 <h1 className="text-center  text-white text-[14px] font-noto h-[18px]">Cv Dəyərləndirmə</h1>
                 <table className="min-w-full  border-[#55A5DB] ">
 
@@ -118,7 +118,7 @@ function Table() {
 
 
             {/* Imtahan */}
-            <div className="w-[549px]  mt-[5px] rounded-lg  bg-[#219886]">
+            <div className="w-[549px] rounded-lg  bg-[#219886]">
                 <h1 className="text-center  text-white text-[14px] font-noto h-[18px]">Cv Dəyərləndirmə</h1>
                 <table className="min-w-full  border-[#55A5DB] ">
 
