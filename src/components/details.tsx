@@ -26,17 +26,17 @@ function Detail() {
             <div className=" w-[1300px] mt-[5px]  rounded-lg  bg-[#295197]">
           
           <table className="min-w-full  bg-white border border-r-[10px] rounded-lg border-r-[#22385F] ">
-              <thead>
-                  <tr className="bg-[#E8EEF8] mt-2 rounded-lg border-[1px] border-solid border-white h-[43px] bo">
-                      <th className="px-1 py-1 font-noto border-[1px] border-solid border-white  text-center w-[80px] text-[14px] font-noto font-medium text-[#22385F] ">Şəhər adı:</th>
-                      <th className="px-1 py-1 font-noto  border-[1px] border-solid border-white text-center w-[80px] text-[14px] font-medium  font-noto text-[#22385F]">Şirkətin adı:</th>
-                      <th className="px-1 py-1 font-noto border-[1px] border-solid border-white text-center  w-[80px] text-[14px] font-medium  font-noto text-[#22385F]">HR mütəxəsssis:</th>
-                      <th className="px-1 py-1 font-noto  border-[1px] border-solid border-white text-center  w-[80px] text-[14px] font-medium  font-noto text-[#22385F]">Vəzifə:</th>
-                      <th className="px-1 py-1 font-noto border-[1px] border-solid border-white text-center  w-[80px] text-[14px] font-medium  font-noto text-[#22385F]"> Müraciət mənbəyi:</th>
-                      <th className="px-1 py-1  font-noto border-[1px] border-solid border-white text-center  w-[80px] text-[14px] font-medium  font-noto text-[#22385F]">Faktiki Bitmə</th>
-                      <th className="px-1 py-1 font-noto  border-[1px] border-solid border-white text-center  w-[80px] text-[14px] font-medium  font-noto text-[#22385F]">Faktiki Bitmə</th>
-                      <th className="px-1 py-1 font-noto border-[1px] border-solid border-white text-center  w-[80px] text-[14px] font-medium  font-noto text-[#22385F]">Faktiki Bitmə</th>
-                      <th className="px-1 py-1  font-noto border-[1px] border-solid border-white text-center  w-[80px] text-[14px] font-medium  font-noto text-[#22385F]">Faktiki Bitmə</th>
+              <thead className="rounded">
+                  <tr className="bg-[#E8EEF8]  mt-2 rounded-lg border-[1px] border-solid border-white h-[43px] bo">
+                      <th className="px-1 py-1 rounded-lg font-noto border-[1px] border-solid border-white  text-center w-[80px] text-[14px] font-noto font-medium text-[#22385F] ">Şəhər adı:</th>
+                      <th className="px-1 py-1  rounded-lg font-noto  border-[1px] border-solid border-white text-center w-[80px] text-[14px] font-medium  font-noto text-[#22385F]">Şirkətin adı:</th>
+                      <th className="px-1 py-1 rounded-lg rounded-lg font-noto border-[1px] border-solid border-white text-center  w-[80px] text-[14px] font-medium  font-noto text-[#22385F]">HR mütəxəsssis:</th>
+                      <th className="px-1 py-1 font-noto rounded-lg border-[1px] border-solid border-white text-center  w-[80px] text-[14px] font-medium  font-noto text-[#22385F]">Vəzifə:</th>
+                      <th className="px-1 py-1 font-noto rounded-lg border-[1px] border-solid border-white text-center  w-[80px] text-[14px] font-medium  font-noto text-[#22385F]"> Müraciət mənbəyi:</th>
+                      <th className="px-1 py-1  font-noto rounded-lg border-[1px] border-solid border-white text-center  w-[80px] text-[14px] font-medium  font-noto text-[#22385F]">Faktiki Bitmə</th>
+                      <th className="px-1 py-1 font-noto rounded-lg border-[1px] border-solid border-white text-center  w-[80px] text-[14px] font-medium  font-noto text-[#22385F]">Faktiki Bitmə</th>
+                      <th className="px-1 py-1 font-noto rounded-lg border-[1px] border-solid border-white text-center  w-[80px] text-[14px] font-medium  font-noto text-[#22385F]">Faktiki Bitmə</th>
+                      <th className="px-1 py-1  font-noto rounded-lg border-[1px] border-solid border-white text-center  w-[80px] text-[14px] font-medium  font-noto text-[#22385F]">Faktiki Bitmə</th>
                   </tr>
               </thead>
               <tbody>
