@@ -27,13 +27,13 @@ function Progress() {
 
 
     return (
-        <div className="flex justify-start mt-3 w-[1400px] overflow-x-scroll   ">
-            <div className="flex ">
+        <div className="flex justify-start mt-5 w-[1400px] overflow-x-scroll ">
+            <div className="flex rounded-xl ">
                 <TableApplicants />
                 {/* Vakansiya elanı */}
-                <div className="w-[300px] mt-[5px]  rounded-lg  bg-[#295197]">
+                <div className="w-[300px]  rounded-xl  bg-[#295197]">
                     <h1 className="text-center text-white text-[14px]   font-noto h-[18px]">Vakansiya elanı</h1>
-                    <table className="min-w-full  bg-white border ">
+                    <table className="min-w-full  bg-white border  ">
 
                         <thead className="w-[10px]">
                             <tr className="bg-[#295197] border-[1px] border-solid border-white h-[15px] bo">
@@ -98,7 +98,7 @@ function Progress() {
                 </div>
 
                 {/* Cv Dəyərləndirmə */}
-                <div className="w-[300px] mt-[5px]  rounded-lg  bg-[#368AC2]">
+                <div className="w-[300px]   rounded-lg  bg-[#368AC2]">
                     <h1 className="text-center text-white text-[14px]   font-noto h-[18px]">Vakansiya elanı</h1>
                     <table className="min-w-full  bg-white border ">
 
@@ -166,7 +166,7 @@ function Progress() {
 
 
                 {/* İmtahan */}
-                <div className="w-[300px] mt-[5px] border-[#32B19F] rounded-lg  bg-[#219886]">
+                <div className="w-[300px]  border-[#32B19F] rounded-lg  bg-[#219886]">
                     <h1 className="text-center text-white text-[14px]   font-noto h-[18px]">İmtahan</h1>
                     <table className="min-w-full  border-[#32B19F]  ">
 
@@ -235,7 +235,7 @@ function Progress() {
 
                 {/* Mərhələ */}
 
-                <div className="w-[300px] mt-[5px]  rounded-lg  bg-[#177668]">
+                <div className="w-[300px]  rounded-lg  bg-[#177668]">
                     <h1 className="text-center text-white text-[14px]   font-noto h-[18px]">Mərhələ</h1>
                     <table className="min-w-full  bg-white border ">
 
@@ -305,14 +305,14 @@ function Progress() {
 
 
              
-                    <div className="w-[300px] mt-[5px] border-[#32B19F] rounded-lg   bg-[#22385F]">
+                    <div className="w-[300px]  border-[#32B19F] rounded-lg   bg-[#22385F]">
                         <h1 className="text-center text-white text-[14px]   font-noto h-[18px]">İmtahan</h1>
-                        <table className="min-w-full  border-[#32B19F]  ">
+                        <table className="min-w-full  border-[#32B19F] border  border-r-[10px] border-r-[#22385F]  ">
 
                             <thead className="w-[10px]">
                                 <tr className="bg-[#22385F] border-[1px] border-solid border-[#32B19F] h-[15px] bo">
-                                    <th className="px-3 py-1  border-[1px] border-solid border-[#32B19F] text-center  w-[70px] text-xs font-medium  font-noto text-white">
-                                        <div>
+                                    <th className="px-1 py-1  border-[1px] border-solid border-[#32B19F] text-center  w-[77px] text-xs font-medium  font-noto text-white">
+                                        <div >
                                             <div className="flex justify-center px-1 gap-[5px] ">
                                                 <p>Plan</p>
                                                 <div className="w-[10px]  h-[10px] mt-[3px] rounded-lg bg-[#22385F]"></div>
@@ -346,7 +346,7 @@ function Progress() {
                             </thead>
                             <tbody >
                                 {planVacancy.map((item) => (
-                                    <tr key={item.id} className="border-b border-white h-[15px] border-[1px] border-solid bg-[#E9ECF3] ">
+                                    <tr key={item.id} className="border-b border-white h-[15px]    border-[1px] border-solid bg-[#E9ECF3] ">
                                         <td className="  border-[1px] border-solid text-center border-white">
                                             <div className="flex justify-center gap-5">
                                                 <div className="w-full bg-gray-200 mt-[5px] rounded-full h-1.5 dark:bg-gray-300">

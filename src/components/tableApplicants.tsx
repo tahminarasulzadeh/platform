@@ -18,7 +18,7 @@ function TableApplicants () {
 
 
     return (
-        <div className="w-[220px]  mt-[5px] rounded-lg  bg-[#22385F] border-r border-l-[10px] border-l-[#22385F] ">
+        <div className="w-[220px]   rounded-lg  bg-[#22385F] border-r border-l-[10px] border-l-[#22385F] ">
         <h1 className="text-center mt-2 text-white text-[18px] font-noto h-[35px]">İşə müraciət edən:</h1>
         <table className="min-w-full  border-[#55A5DB] ">
 

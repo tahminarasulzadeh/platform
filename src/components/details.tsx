@@ -20,10 +20,10 @@ function Detail() {
 
     return (
 
-        <div className="flex justify-start mt-3 w-[1400px] rounded-lg overflow-x-scroll ">
+        <div className="flex justify-start mt-5 w-[1400px] rounded-lg overflow-x-scroll ">
             <div className="flex rounded-lg ">
             <TableApplicants /> 
-            <div className=" w-[1300px] mt-[5px]  rounded-lg  bg-[#295197]">
+            <div className=" w-[1300px] rounded-lg  bg-[#295197]">
           
           <table className="min-w-full  bg-white border border-r-[10px] rounded-lg border-r-[#22385F] ">
               <thead className="rounded">

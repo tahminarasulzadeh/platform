@@ -35,11 +35,11 @@ function Table() {
     ];
 
     return (
-        <div className="flex justify-start mt-3 w-[1400px] overflow-x-scroll  ">
+        <div className="flex justify-start mt-5 w-[1400px] overflow-x-scroll  ">
             <div className="flex ">
                 <TableApplicants />
       {/* Vakansiya elanı */}
-      <div className="w-[549px] mt-[5px]  rounded-lg  bg-[#295197]">
+      <div className="w-[549px]   rounded-lg  bg-[#295197]">
                 <h1 className="text-center text-white text-[14px]   font-noto h-[18px]">Vakansiya elanı</h1>
                 <table className="min-w-full  bg-white border ">
 

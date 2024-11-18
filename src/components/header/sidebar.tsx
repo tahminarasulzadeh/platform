@@ -47,7 +47,7 @@ function Sidebar() {
    return (
       <aside className="flex sidebar justify-star" ref={sidebarRef}>
          <div className={`bg-[#172847]  min-h-screen  ${open ? "w-[290px]" : "w-[40px]"}`}>
-            <div className={`py-3 flex ${open ?  "justify-start ml-[10px]" : "justify-center  hover:bg-[#275EC3]"}`}>
+            <div className={`py-3 flex ${open ?  "justify-start ml-[15px]" : "justify-center  hover:bg-[#275EC3]"}`}>
                <img src={dotsMenu} alt='dotsMenu' className="cursor-pointer" onClick={toggleSidebar} />
                {open ? <h2 className="text-[#C9CACB] font-noto font-normal ml-[5px] mt-[3px] text-[14px] leading-[19.07px]">Menu</h2> : null}
                {open ? <img src={cross} alt="cross" className="relative left-[11rem] mt-[5px] cursor-pointer" onClick={() => setOpen(false)} /> : null}
@@ -59,9 +59,9 @@ function Sidebar() {
             </div>
             }
 
-            <div className={`py-2 px-2 mt-7 flex transition-all  hover:bg-[#275EC3] duration-[1000ms]   ${open ? "justify-start rounded-md ml-[10px] w-[270px] cursor-pointer  " : "justify-center"}`} onClick={() => setOpen(true)}>
+            <div className={`py-2 px-2 mt-7 flex transition-all  justify-between hover:bg-[#275EC3] duration-[1000ms]   ${open ? "justify-start rounded-md ml-[10px] w-[270px] cursor-pointer  " : "justify-center"}`} onClick={() => setOpen(true)}>
                <img src={sales} alt='dotsMenu' className="cursor-pointer" />
-               {open ? <h2 className="text-[#C9CACB] font-noto font-normal ml-[7px] mt-[3px] text-[14px] leading-[19.07px]  ">Satınalma İcmalı</h2> : null}
+               {open ? <h2 className="text-[#C9CACB] font-noto font-normal ml-[3px] mt-[3px] text-[14px] leading-[19.07px]  ">Satınalma İcmalı</h2> : null}
                {open ? <div className="w-[10px] h-[10px] border-[1px] border-[#C9CACB] rounded-full mt-[10px] ml-[6.8rem]"></div> : null}
             </div>
 
@@ -94,29 +94,29 @@ function Sidebar() {
             </div>
 
 
-            <div className={`py-2 flex mt-3 px-2 transition-all duration-[1000ms] hover:bg-[#275EC3] ${open ? "justify-start ml-[10px] w-[270px] cursor-pointer   rounded-md  " : "justify-center"}`} onClick={() => setOpen(true)}>
-               <img src={finance} alt='dotsMenu' className="cursor-pointer" />
-               {open ? <h2 className="text-[#C9CACB] font-noto font-normal ml-[12px]  mt-[1px] text-[14px] leading-[19.07px]">Maliyyə</h2> : null}
+            <div className={`py-2 flex mt-3 px-2 transition-all justify-between duration-[1000ms] hover:bg-[#275EC3] ${open ? "justify-start ml-[8px] w-[270px] cursor-pointer   rounded-md  " : "justify-center"}`} onClick={() => setOpen(true)}>
+               <img src={finance} alt='dotsMenu' className="cursor-pointer w-[18px]" />
+               {open ? <h2 className="text-[#C9CACB] font-noto font-normal ml-[5px]  mt-[1px] text-[14px] leading-[19.07px]">Maliyyə</h2> : null}
                {open ? <div className="w-[10px] h-[10px] border-[1px] border-[#C9CACB] rounded-full mt-[6px] ml-[10.3rem]"></div> : null}
             </div>
 
 
-            <div className={`py-2  mt-3 flex px-2 transition-all duration-[1000ms] hover:bg-[#275EC3] ${open ? "justify-start ml-[10px] w-[270px] cursor-pointer    rounded-md" : "justify-center"}`} onClick={() => setOpen(true)}>
+            <div className={`py-2  mt-3 flex px-2 transition-all  justify-between  justify-between duration-[1000ms] hover:bg-[#275EC3] ${open ? "justify-start ml-[10px] w-[270px] cursor-pointer    rounded-md" : "justify-center"}`} onClick={() => setOpen(true)}>
                <img src={comInfo} alt='company-info' className="cursor-pointer" />
-               {open ? <h2 className="text-[#C9CACB] font-noto font-normal ml-[9px] mt-[1px] text-[14px] leading-[19.07px]">Şirkət Məlumatları</h2> : null}
+               {open ? <h2 className="text-[#C9CACB] font-noto font-normal ml-[3px] mt-[1px] text-[14px] leading-[19.07px]">Şirkət Məlumatları</h2> : null}
                {open ? <div className="w-[10px] h-[10px] border-[1px] border-[#C9CACB] rounded-full mt-[5px] ml-[6.0rem]"></div> : null}
             </div>
 
 
-            <div className={`py-2 mt-3 flex px-2 transition-all duration-[1000ms] hover:bg-[#275EC3] ${open ? "justify-start ml-[10px]  w-[270px] cursor-pointer   rounded-md" : "justify-center"}`} onClick={() => setOpen(true)}>
-               <img src={graphic} alt='company-info' className="cursor-pointer" />
-               {open ? <h2 className="text-[#C9CACB] font-noto font-normal ml-[9px] mt-[1px] text-[14px] leading-[19.07px]">İş qrafiki</h2> : null}
+            <div className={`py-2 mt-3 flex px-2 transition-all  justify-between duration-[1000ms] hover:bg-[#275EC3] ${open ? "justify-start ml-[10px]  w-[270px] cursor-pointer   rounded-md" : "justify-center"}`} onClick={() => setOpen(true)}>
+               <img src={graphic} alt='company-info' className="cursor-pointer w-[18px]" />
+               {open ? <h2 className="text-[#C9CACB] font-noto font-normal  ml-[5px] mt-[1px] text-[14px] leading-[19.07px]">İş qrafiki</h2> : null}
                {open ? <div className="w-[10px] h-[10px] border-[1px] border-[#C9CACB] rounded-full mt-[5px] ml-[10.2rem]"></div> : null}
             </div>
 
-            <div className={`py-2 mt-3 flex px-2 transition-all duration-[1000ms] hover:bg-[#275EC3] ${open ? "justify-start ml-[10px] w-[270px] cursor-pointer   rounded-md " : "justify-center"}`} onClick={() => setOpen(true)}>
+            <div className={`py-2 mt-3 flex px-2 transition-all  justify-between duration-[1000ms] hover:bg-[#275EC3] ${open ? "justify-start ml-[10px] w-[270px] cursor-pointer   rounded-md " : "justify-center"}`} onClick={() => setOpen(true)}>
                <img src={quality} alt='company-info' className="cursor-pointer" />
-               {open ? <h2 className="text-[#C9CACB] font-noto font-normal ml-[9px] mt-[1px] text-[14px] leading-[19.07px]">Keyfiyyət</h2> : null}
+               {open ? <h2 className="text-[#C9CACB] font-noto font-normal  ml-[3px] mt-[1px] text-[14px] leading-[19.07px]">Keyfiyyət</h2> : null}
                {open ? <div className="w-[10px] h-[10px] border-[1px] border-[#C9CACB] rounded-full mt-[5px] ml-[9.9rem]"></div> : null}
             </div>
             <div>

@@ -17,10 +17,10 @@ const Dropdown = () => {
       {/* Dropdown Button */}
       <button
         onClick={toggleDropdown}
-        className="inline-flex  justify-start w-full px-2 py-2    transition-all duration-[1000ms] text-white font-medium rounded-md shadow-sm hover:bg-[#275EC3] focus:outline-none"
+        className="inline-flex  justify-between w-full px-2 py-2    transition-all duration-[1000ms] text-white font-medium rounded-md shadow-sm hover:bg-[#275EC3] focus:outline-none"
       >
         <img src={plan} alt="plan" />
-        <span className='ml-[10px] font-noto text-[14px] font-[400] leading-[19.07px]'>Planlama</span>
+        <span className=' font-noto text-[14px] ml-[3px] font-[400] leading-[19.07px]'>Planlama</span>
         <img src={select} alt="select" className=' w-[20px] ml-[3px] mt-[1px]' />
         <div className="w-[10px] h-[10px] border-[1px] border-[#FFFFFF] rounded-full mt-[7.5px] ml-[8.1rem]"></div>
       </button>
