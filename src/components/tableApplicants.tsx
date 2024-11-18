@@ -3,15 +3,15 @@ function TableApplicants () {
         { id: 1, name: "Ali Mammadov" },
         { id: 2, name: "Leyla Aliyeva" },
         { id: 3, name: "Farid Hasanov" },
-        { id: 4, name: "Tural Ismayilova" },
+        { id: 4, name: "Tural Ismayilov" },
         { id: 5, name: "Sevinj Karimova" },
         { id: 6, name: "Elnur Guliev" },
         { id: 7, name: "Aysel Nurullayeva" },
-        { id: 8, name: "Ali Mammadova" },
+        { id: 8, name: "Ali Mammadov" },
         { id: 9, name: "Leyla Aliyeva" },
         { id: 10, name: "Farid Hasanov" },
         { id: 11, name: "Sevinj Karimova" },
-        { id: 12, name: "Ali Mammadova" },
+        { id: 12, name: "Ali Mammadov" },
         
 
     ];
