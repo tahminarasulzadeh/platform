@@ -66,19 +66,22 @@ function Sidebar() {
             </div>
 
 
-            <div className={`py-1 mt-3 flex ${open ? "justify-start ml-[10px]" : "justify-center"}`} onClick={() => setOpen(true)}>
-               {open ? <Dropdown /> :
-                  <div className=" flex flex-col items-center gap-[10px] transition-all duration-[1000ms]">
+            <div className={`py-1 mt-3  flex ${open ? "justify-start ml-[10px]" : "justify-center "}`} onClick={() => setOpen(true)}>
+               {open ? <Dropdown  /> :
+                  <div className=" flex flex-col items-center   gap-[10px] transition-all duration-[1000ms]">
+                     <div className="flex justify-center hover:bg-[#275EC3] mt-[5px] w-[40px] h-[21px]">
                      <img src={plan} alt='dotsMenu' className="cursor-pointer  justify-center" />
+                     </div>
+                     
                      <div>
-                        <div className="flex justify-center mt-[5px] w-[40px] h-[21px]">
+                        <div className="flex justify-center hover:bg-[#275EC3] mt-[5px] w-[40px] h-[21px]">
                            <img src={master} alt='dotsMenu' className="cursor-pointer w-[11px] h-[15.28px]" />
                         </div>
 
-                        <div className="flex items-center mt-[-1px] flex-col w-[40px] h-[24px] gap-[10px] ">
+                        <div className="flex items-center hover:bg-[#275EC3] mt-[-1px] flex-col w-[40px] h-[24px] gap-[10px] ">
                            <img src={state} alt='dotsMenu' className="cursor-pointer mt-[5px] w-[12.23px] h-[14.67px]" />
                             </div>
-                          <div className="flex items-center mt-[-1px] flex-col w-[40px] h-[24px] gap-[10px] " >
+                          <div className="flex items-center hover:bg-[#275EC3] mt-[-1px] flex-col w-[40px] h-[24px] gap-[10px] " >
                            <img src={report} alt='dotsMenu' className="cursor-pointer  ml-[3px] w-[10.04px] h-[14.67px]]" />
                         </div>
 
@@ -91,27 +94,27 @@ function Sidebar() {
             </div>
 
 
-            <div className={`py-2 flex mt-3 px-2 transition-all duration-[1000ms] hover:bg-[#1F3D74] ${open ? "justify-start ml-[10px] w-[270px] cursor-pointer   rounded-md  " : "justify-center"}`} onClick={() => setOpen(true)}>
+            <div className={`py-2 flex mt-3 px-2 transition-all duration-[1000ms] hover:bg-[#275EC3] ${open ? "justify-start ml-[10px] w-[270px] cursor-pointer   rounded-md  " : "justify-center"}`} onClick={() => setOpen(true)}>
                <img src={finance} alt='dotsMenu' className="cursor-pointer" />
-               {open ? <h2 className="text-[#C9CACB] font-noto font-normal ml-[12px] mt-[1px] text-[14px] leading-[19.07px]">Maliyyə</h2> : null}
+               {open ? <h2 className="text-[#C9CACB] font-noto font-normal ml-[12px]  mt-[1px] text-[14px] leading-[19.07px]">Maliyyə</h2> : null}
                {open ? <div className="w-[10px] h-[10px] border-[1px] border-[#C9CACB] rounded-full mt-[6px] ml-[10.3rem]"></div> : null}
             </div>
 
 
-            <div className={`py-2  mt-3 flex px-2 transition-all duration-[1000ms] hover:bg-[#1F3D74] ${open ? "justify-start ml-[10px] w-[270px] cursor-pointer    rounded-md" : "justify-center"}`} onClick={() => setOpen(true)}>
+            <div className={`py-2  mt-3 flex px-2 transition-all duration-[1000ms] hover:bg-[#275EC3] ${open ? "justify-start ml-[10px] w-[270px] cursor-pointer    rounded-md" : "justify-center"}`} onClick={() => setOpen(true)}>
                <img src={comInfo} alt='company-info' className="cursor-pointer" />
                {open ? <h2 className="text-[#C9CACB] font-noto font-normal ml-[9px] mt-[1px] text-[14px] leading-[19.07px]">Şirkət Məlumatları</h2> : null}
                {open ? <div className="w-[10px] h-[10px] border-[1px] border-[#C9CACB] rounded-full mt-[5px] ml-[6.0rem]"></div> : null}
             </div>
 
 
-            <div className={`py-2 mt-3 flex px-2 transition-all duration-[1000ms] hover:bg-[#1F3D74] ${open ? "justify-start ml-[10px]  w-[270px] cursor-pointer   rounded-md" : "justify-center"}`} onClick={() => setOpen(true)}>
+            <div className={`py-2 mt-3 flex px-2 transition-all duration-[1000ms] hover:bg-[#275EC3] ${open ? "justify-start ml-[10px]  w-[270px] cursor-pointer   rounded-md" : "justify-center"}`} onClick={() => setOpen(true)}>
                <img src={graphic} alt='company-info' className="cursor-pointer" />
                {open ? <h2 className="text-[#C9CACB] font-noto font-normal ml-[9px] mt-[1px] text-[14px] leading-[19.07px]">İş qrafiki</h2> : null}
                {open ? <div className="w-[10px] h-[10px] border-[1px] border-[#C9CACB] rounded-full mt-[5px] ml-[10.2rem]"></div> : null}
             </div>
 
-            <div className={`py-2 mt-3 flex px-2 transition-all duration-[1000ms] hover:bg-[#1F3D74] ${open ? "justify-start ml-[10px] w-[270px] cursor-pointer   rounded-md " : "justify-center"}`} onClick={() => setOpen(true)}>
+            <div className={`py-2 mt-3 flex px-2 transition-all duration-[1000ms] hover:bg-[#275EC3] ${open ? "justify-start ml-[10px] w-[270px] cursor-pointer   rounded-md " : "justify-center"}`} onClick={() => setOpen(true)}>
                <img src={quality} alt='company-info' className="cursor-pointer" />
                {open ? <h2 className="text-[#C9CACB] font-noto font-normal ml-[9px] mt-[1px] text-[14px] leading-[19.07px]">Keyfiyyət</h2> : null}
                {open ? <div className="w-[10px] h-[10px] border-[1px] border-[#C9CACB] rounded-full mt-[5px] ml-[9.9rem]"></div> : null}

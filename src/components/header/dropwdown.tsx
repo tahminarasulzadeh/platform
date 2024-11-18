@@ -13,7 +13,7 @@ const Dropdown = () => {
   };
 
   return (
-    <div className={` ${isOpen && "h-[144px]" } w-[270px] relative inline-block  text-left`}>
+    <div className={` ${isOpen && "h-[144px]" } w-[270px] relative hover:bg-[#275EC3] inline-block  text-left`}>
       {/* Dropdown Button */}
       <button
         onClick={toggleDropdown}
